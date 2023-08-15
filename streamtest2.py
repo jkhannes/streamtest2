@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-import matplotlib.pyplot as plt
+
 
 st.title("Einfache Streamlit App")
 
@@ -15,16 +15,6 @@ st.write(f"Hallo {name}! Sie haben die Zahl {number} eingegeben.")
 # Interaktiver Plot
 st.subheader("Interaktiver Plot")
 
-x = np.linspace(0, 10, 100)
-y = np.sin(number * x)
-
-fig, ax = plt.subplots()
-ax.plot(x, y)
-ax.set_xlabel("X-Werte")
-ax.set_ylabel("Y-Werte")
-ax.set_title("Sinus-Funktion")
-
-st.pyplot(fig)
 
 # Checkbox
 show_data = st.checkbox("Daten anzeigen")
